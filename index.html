@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS training 1 : création obj + log phrase</title>
+	<style>
+		body{
+			font-family: Avenir;
+		}
+		h1{
+			color: dodgerblue;
+			font-size: 22px;
+		}
+
+		h2{
+			font-size: 16px;
+		}
+	</style>
+
+
+
+	<script>
+		
+		var fruit = {
+			nom: "une pomme",
+			couleur: "verte",
+			prix: .5,
+			origine: "France",
+		}
+		console.log(fruit)
+		console.log("Dans mon panier, j'ai " + fruit.nom + " de couleur " + fruit.couleur + "." + " Ce fruit a été cueilli en " + fruit.origine + " et m'a couté " + fruit.prix + " euros.")
+		console.log(`Dans mon panier, j'ai ${fruit.nom} de couleur ${fruit.couleur}. Ce fruit a été cueilli en ${fruit.origine} et m'a couté ${fruit.prix} euros. Cette phrase a été rédigée avec la méthode $ {}.`)
+
+
+
+
+		var newfruit = function(a,b,c,d) {
+			return {
+				nom: a, 
+				couleur: b, 
+				prix: c, 
+				origine: d,
+			}
+		}
+		console.log(newfruit("raisin", "noire", 1, "Espagne"));
+		var newfruit1 = newfruit("raisin", "noire", 1, "Espagne");
+		console.log(newfruit1);
+
+
+
+		var creerProduit = function (n, p, r, s){
+			return {
+				name: n,
+				price: p,
+				ref: r,
+				stock: s,
+			}
+		}
+
+		var prod1 = creerProduit("synthé", 1299, "synth1233R", 10); // on lui applique la fonction 
+		var prod2 = creerProduit("sneakers", 60, "Nikebs66H", 1);
+		console.log(prod1);
+		console.log(prod2);
+
+
+
+		var flower = function(type, couleur, prix){
+			return {
+				type: type,
+				couleur: couleur,
+				prix: prix,
+			}
+		}
+
+
+		var flower1 = flower("rose", "rouge", 1);
+		var flower2 = flower("muguet", "blanc", 1);
+
+		console.log(flower1);
+		console.log(flower2);
+
+	</script>
+
+
+
+</head>
+<body>
+
+	<h1>Objects</h1>
+	<h2>Création d'objets + log phrase</h2>
+	
+</body>
+</html>
